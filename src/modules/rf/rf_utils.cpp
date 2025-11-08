@@ -363,7 +363,12 @@ struct RfCodes selectRecentRfMenu() {
     for (int i = 0; i < 16; i++) {
         if (recent_rfcodes[i].filepath == "") continue; // not inited
 
-        options.emplace_back(recent_rfcodes[i].filepath.c_str(), [i, &selected_code]() {
+        String displayName = recent_rfcodes[i].filepath;
+        if (displayName.length() > 28) {
+            displayName = displayName.substring(0, 25) + "...";
+        }
+
+        options.emplace_back(displayName.c_str(), [i, &selected_code]() {
             selected_code = recent_rfcodes[i];
         });
     }

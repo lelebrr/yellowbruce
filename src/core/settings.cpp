@@ -983,13 +983,15 @@ void setStartupApp() {
 
     int index = 1;
     for (String appName : startupApp.getAppNames()) {
-        if (bruceConfig.startupApp == appName) idx = index++;
+        if (bruceConfig.startupApp == appName) {
+            idx = index;
+        }
 
         options.push_back(
             {appName.c_str(),
              [=]() { bruceConfig.setStartupApp(appName); },
-             bruceConfig.startupApp == appName}
-        );
+             bruceConfig.startupApp == appName});
+        index++;
     }
 
     loopOptions(options, idx);
