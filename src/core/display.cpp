@@ -1637,7 +1637,7 @@ bool drawImg(FS &fs, String filename, int x, int y, bool center, int playDuratio
 /// Draw PNG files
 
 #include <PNGdec.h>
-#define MAX_IMAGE_WIDTH 320
+#define MAX_IMAGE_WIDTH tftWidth
 PNG *png;
 // Functions to access a file on the SD card
 File myfile;
