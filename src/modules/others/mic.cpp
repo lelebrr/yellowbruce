@@ -313,7 +313,7 @@ void mic_record() {
         return;
     }
 
-    char filename[32];
+    char filename[64];
     int index = 0;
 
     if (!fs->exists("/BruceMIC")) {
