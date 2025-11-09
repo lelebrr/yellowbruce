@@ -404,12 +404,13 @@ void setup() {
     tft.begin();
 #endif
     begin_storage();
-    begin_tft();
-    init_clock();
-    init_led();
 
     // Some GPIO Settings (such as CYD's brightness control must be set after tft and sdcard)
     _post_setup_gpio();
+
+    begin_tft();
+    init_clock();
+    init_led();
     // end of post gpio begin
 
     // #ifndef USE_TFT_eSPI_TOUCH
