@@ -6,6 +6,7 @@
 #include "core/utils.h"
 #include "modules/ethernet/ARPScanner.h"
 #include "modules/ethernet/DHCPStarvation.h"
+#undef PACKET_LENGTH
 #include "modules/ethernet/EthernetHelper.h"
 #include "modules/ethernet/MACFlooding.h"
 
