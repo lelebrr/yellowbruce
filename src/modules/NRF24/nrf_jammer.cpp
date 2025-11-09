@@ -244,7 +244,7 @@ void nrf_channel_hopper() {
             tft.setCursor(10, 150);
             tft.print("Exit");
 
-            int yHighlight;
+            int yHighlight = 0;
             if (menuIndex == 0) yHighlight = 70;
             if (menuIndex == 1) yHighlight = 90;
             if (menuIndex == 2) yHighlight = 110;
